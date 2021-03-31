@@ -3,10 +3,7 @@ package com.jojoIdu.book.springboot.web;
 import com.jojoIdu.book.springboot.config.auth.LoginUser;
 import com.jojoIdu.book.springboot.config.auth.dto.SessionUser;
 import com.jojoIdu.book.springboot.service.posts.PostsService;
-import com.jojoIdu.book.springboot.web.domain.posts.Posts;
-import com.jojoIdu.book.springboot.web.dto.PostsListResponseDto;
 import com.jojoIdu.book.springboot.web.dto.PostsResponseDto;
-import javafx.geometry.Pos;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpSession;
-import java.util.List;
-
 @RequiredArgsConstructor
 @Controller
 public class IndexContrller {
