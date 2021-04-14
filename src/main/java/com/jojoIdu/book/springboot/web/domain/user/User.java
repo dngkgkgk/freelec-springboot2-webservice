@@ -3,9 +3,11 @@ package com.jojoIdu.book.springboot.web.domain.user;
 import lombok.Builder;
 import lombok.Generated;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@NoArgsConstructor
 @Entity
 @Getter
 public class User {
