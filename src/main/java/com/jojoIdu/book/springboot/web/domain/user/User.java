@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
+//수정
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
