@@ -25,7 +25,6 @@ function find_idle_profile()
     # - 엔진엑스와 연결되지않은 profile입니다.
     # - 스프링 부트 프로젝트를 이 profile로 연결하기 위해 반환합니다.
     IDLE_PROFILE=real2
-
   else
     IDLE_PROFILE=real1
   fi
@@ -33,7 +32,7 @@ function find_idle_profile()
   # bash라는 스크립트는 값을 반환하는 기능이 없습니다.
   # 그래서 제일 마지막 줄에 echo로 결과를 출력 후, 클라이언트에서 그 값을 잡아서 ($(find_idle_profile)) 사용합니다.
   # 중간에 echo를 사용해서는 안됩니다.
-  echo ${IDLE_PROFILE}
+  echo "${IDLE_PROFILE}"
 
 }
 
@@ -42,7 +41,7 @@ function find_idle_port()
 {
   IDLE_PROFILE=$(find_idle_profile)
 
-  if [ ${IDLE_PROFILE} == real ]
+  if [ ${IDLE_PROFILE} == real1 ]
   then
     echo "8081"
   else
