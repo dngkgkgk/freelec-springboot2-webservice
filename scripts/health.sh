@@ -9,7 +9,7 @@ IDLE_PORT=$(find_idle_port)
 
 echo "> Health Check Start!"
 echo "> IDLE_PORT: $IDLE_PORT"
-echo "> curl -s http://localhost:$IDLE_PORT/profile "
+echo "> curl -s http://localhost:$IDLE_PORT/profile"
 sleep 10
 
 for RETRY_COUNT in {1..10}
@@ -29,11 +29,15 @@ do
 
   if [ ${RETRY_COUNT} -eq 10 ]
   then
-    echo "> Health check 실패. "
-    echo "> 엔진엑스에 연결하지 않고 배포를 종료합니다."
+      echo "> Health check 실패."
+      echo "> 엔진엑스에 연결하지 않고 배초를 종료합니다."
     exit 1
   fi
 
   echo "> Health check 연결 실패. 재시도..."
   sleep 10
 done
+
+#엔진엑스와 연결되지 않은 포트로 스프링 부트가 잘 수행되었는지 체크합니다.
+#잘 떴는지 확인되어야 엔진엑스 프록시 설정을 변경(switch_proxy)합니다.
+#엔진엑스 프록시 설정 변경은 switch.sh에서 수행합니다.
