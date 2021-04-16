@@ -16,7 +16,7 @@ ABSDIR=$(dirname $ABSPATH)
 
 # source ${ABSDIR}/profile.sh
 # 자바로 보면 일종의 import 구문입니다.
-# 해당코드로 인해 stop.sh에서도 profile.sh의 여러 function을 사용할 수 있게 됩니다.
+# 해당코드로 인해 stop.sh에서도 profile.sh의 여러 function을 사용할 수 있게 됩니다..
 source ${ABSDIR}/profile.sh
 
 IDLE_PORT=$(find_idle_port)
